@@ -4,7 +4,8 @@
   "description": "",
   "main": "index.js",
   "scripts": {
-    "test": "jest"
+    "test": "jest",
+    "prepare": "husky"
   },
   "keywords": [],
   "author": "Rafael Paulo",
@@ -22,16 +23,5 @@
     "lint-staged": "^15.5.2",
     "ts-jest": "^29.3.2",
     "typescript": "^5.8.3"
-  },
-  "husky": {
-    "hooks": {
-      "pre-commit": "lint-staged"
-    }
-  },
-  "lint-staged": {
-    "*.ts": [
-      "eslint 'src/**' --fix",
-      "git add"
-    ]
   }
 }
