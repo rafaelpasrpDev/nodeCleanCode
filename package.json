@@ -5,7 +5,7 @@
   "main": "index.js",
   "scripts": {
     "test": "jest",
-    "lint-staged": "eslint 'src/**' --fix && git add",
+    "lint-staged": "eslint 'src/**' --fix && git add .",
     "prepare": "husky"
   },
   "keywords": [],
