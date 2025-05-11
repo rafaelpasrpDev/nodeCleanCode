@@ -4,9 +4,9 @@
   "description": "",
   "main": "index.js",
   "scripts": {
-    "test": "jest --passWithNoTests",
+    "test": "jest --passWithNoTests --watch",
     "test:staged": "jest --passWithNoTests",
-    "lint-staged": "eslint 'src/**' --fix && npm run test:staged && git add .",
+    "lint-staged": "eslint 'src/**' --fix && npm run test:staged ",
     "prepare": "husky"
   },
   "keywords": [],
