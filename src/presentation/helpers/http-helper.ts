@@ -1,5 +1,4 @@
-import { AccountModel } from '../controller/signup/signup-protocols'
-import { ServerError } from '../errors/server-error'
+import { ServerError } from '../errors'
 import { HttpResponse } from '../protocols/http'
 
 export const BadRequest = (error: Error): HttpResponse => ({
