@@ -1,3 +1,4 @@
+import { AccountModel } from '../controller/signup/signup-protocols'
 import { ServerError } from '../errors/server-error'
 import { HttpResponse } from '../protocols/http'
 
@@ -11,7 +12,7 @@ export const serverError = (): HttpResponse => ({
   body: new ServerError(),
 })
 
-export const Ok = (): HttpResponse => ({
+export const Ok = (account: AccountModel): HttpResponse => ({
   statusCode: 200,
-  body: 'successfull',
+  body: account,
 })
