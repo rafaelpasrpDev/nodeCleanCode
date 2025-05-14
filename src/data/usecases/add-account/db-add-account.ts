@@ -1,10 +1,5 @@
-import {
-  AddAccount,
-  AddAccountModel,
-  AccountModel,
-  Encrypter,
-  AddAccountRepository,
-} from './db-add-account-protocols'
+/* eslint-disable prettier/prettier */
+import { AddAccount, AddAccountModel, AccountModel, Encrypter, AddAccountRepository } from './db-add-account-protocols'
 
 export class DbAddAccount implements AddAccount {
   private readonly encrypter: Encrypter
@@ -20,7 +15,7 @@ export class DbAddAccount implements AddAccount {
   async add(accountData: AddAccountModel): Promise<AccountModel> {
     const hashedPass = await this.encrypter.encrypt(accountData.password)
     // eslint-disable-next-line prettier/prettier
-    await this.addAccountRepository.add(Object.assign({}, accountData, {password: hashedPass}))
-    return new Promise((resolve) => resolve(null))
+    const account = await this.addAccountRepository.add(Object.assign({}, accountData, {password: hashedPass}))
+    return account
   }
 }
