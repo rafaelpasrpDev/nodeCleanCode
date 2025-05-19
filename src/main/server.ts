@@ -1,4 +1,3 @@
-import express from 'express'
+import app from './config/app'
 
-const app = express()
-app.listen(5051, () => console.log('HttpRequest listining port: 5051'))
+app.listen(5051, () => console.log('HTTP request listening port 5051'))
