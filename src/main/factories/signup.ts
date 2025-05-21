@@ -6,7 +6,7 @@ import { BcryptAdapter } from '../../infra/criptography/bcrypt-adapter'
 import { AccountMongoRepository } from '../../infra/db/mongodb/account-repository/account'
 
 export const makeSignUpController = (): SignUpController => {
-  const salt = 12
+  const salt: number = 12
   const emailValidatorAdapter = new EmailValidatorAdapter()
   const bryptAdapter = new BcryptAdapter(salt)
   const accountMongoRepository = new AccountMongoRepository()
